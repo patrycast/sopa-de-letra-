@@ -28,6 +28,10 @@ export const Page = styled.div`
   * {
     box-sizing: border-box;
   }
+
+  @media (max-width: 600px) {    // Ajuste para pantallas pequeñas
+    padding: 6px;
+  }
 `;
 
 export const Wrap = styled.div`
@@ -39,6 +43,11 @@ export const Wrap = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 6px;
+
+    @media (max-width: 600px) {
+    gap: 4px;
+    max-width: 100%;
+  }
 `;
 
 export const Header = styled.header`
@@ -51,6 +60,10 @@ export const Eyebrow = styled.p`
   color: var(--sea-deep);
   letter-spacing: 0.3px;
   margin: 0 0 2px;
+
+    @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -59,6 +72,10 @@ export const Title = styled.h1`
   margin: 0 0 4px;
   color: var(--sea-deep);
   line-height: 1.15;
+
+    @media (max-width: 600px) {
+    font-size: clamp(15px, 5.5vw, 20px);
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -67,6 +84,14 @@ export const Subtitle = styled.p`
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.35;
+
+  @media (max-width: 600px) {
+    font-size: 11px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 `;
 
 export const BoardCard = styled.div`
@@ -97,12 +122,20 @@ export const ProgressRow = styled.div`
   padding: 0 4px;
   width: 100%;
   flex: 0 0 auto;
+
+   @media (max-width: 600px) {
+    margin-bottom: 6px;
+  }
 `;
 
 export const ProgressLabel = styled.span`
   font-size: clamp(11px, 1.7vh, 15px);
   font-weight: bold;
   color: var(--sea-deep);
+
+    @media (max-width: 600px) {
+    font-size: 11px;
+  }
 `;
 
 export const ProgressTrack = styled.div`
@@ -127,6 +160,11 @@ export const ProgressCount = styled.span`
   color: var(--coral-deep);
   min-width: 40px;
   text-align: right;
+
+   @media (max-width: 600px) {
+    font-size: 11px;
+    min-width: 32px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -143,6 +181,13 @@ export const Grid = styled.div`
   width: min(100%, 58vh, 58vw);
   flex: 0 1 auto;
   min-height: 0;
+
+   @media (max-width: 600px) {
+    width: min(96vw, 62vh);
+    gap: 1.5px;
+    padding: 3px;
+    border-radius: 12px;
+  }
 `;
 
 export const Cell = styled.div`
@@ -158,6 +203,11 @@ export const Cell = styled.div`
   cursor: pointer;
   transform: ${(p) => (p.$painting ? "scale(1.05)" : "scale(1)")};
   transition: background 0.08s ease, color 0.08s ease, transform 0.08s ease;
+
+   @media (max-width: 600px) {
+    font-size: clamp(9px, 4.6vw, 15px);
+    border-radius: 4px;
+  }
 `;
 
 export const WordList = styled.div`
@@ -169,6 +219,11 @@ export const WordList = styled.div`
   flex: 0 0 auto;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    margin-top: 6px;
+    gap: 4px;
+  }
 `;
 
 export const WordChip = styled.span`
@@ -185,6 +240,12 @@ export const WordChip = styled.span`
   opacity: ${(p) => (p.$done ? 0.85 : 1)};
   white-space: nowrap;
   transition: all 0.3s ease;
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-width: 1.5px;
+  }
 `;
 
 export const WinBanner = styled.div`
@@ -199,6 +260,11 @@ export const WinBanner = styled.div`
   font-weight: bold;
   flex: 0 0 auto;
   width: 100%;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+    padding: 6px;
+  }
 `;
 
 export const ResetButton = styled.button`
@@ -216,5 +282,11 @@ export const ResetButton = styled.button`
 
   &:hover {
     background: var(--sea);
+  }
+
+   @media (max-width: 600px) {
+    font-size: 12px;
+    padding: 7px 18px;
+    margin-top: 6px;
   }
 `;
